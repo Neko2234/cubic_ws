@@ -1,0 +1,1 @@
+/home/m/cubic_ws/devel/.private/cubic_code/lib/pkgconfig/cubic_code.pc

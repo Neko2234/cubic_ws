@@ -1,0 +1,1 @@
+/home/m/cubic_ws/devel/.private/omni/share/omni/cmake/omniConfig.cmake

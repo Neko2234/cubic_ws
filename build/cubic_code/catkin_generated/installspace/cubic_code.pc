@@ -1,0 +1,8 @@
+prefix=/home/m/cubic_ws/install
+
+Name: cubic_code
+Description: Description of cubic_code
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

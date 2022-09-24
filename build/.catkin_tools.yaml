@@ -1,0 +1,6 @@
+devel_space: /home/m/cubic_ws/devel
+install: false
+install_space: /home/m/cubic_ws/install
+profile: default
+source_space: /home/m/cubic_ws/src
+workspace: /home/m/cubic_ws
