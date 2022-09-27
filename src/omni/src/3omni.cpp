@@ -3,9 +3,10 @@
 #include <sensor_msgs/Joy.h>
 #include <string>
 
-#define MOTOR_NUM 4
+#define MOTOR_NUM 3
 #define PW_MAX 100 //モータ出力絶対値の最大値
 #define SQRT2 1.41421356
+#define SQRT3 1.7320504
 #define DIRE 1 //モータ回転方向調整用の変数
 
 std::string mode = "progress";
@@ -29,15 +30,14 @@ void omni_calc() {
         //位置:回転=1:sqrt2 → 1:1 にスケーリング
         //ang *= 0.5*SQRT2;
 
-        /*v_raw[0] = - 0.5*SQRT2*vx - 0.5*SQRT2*vy + ang;
-        v_raw[1] =   0.5*SQRT2*vx - 0.5*SQRT2*vy + ang;
-        v_raw[2] =   0.5*SQRT2*vx + 0.5*SQRT2*vy + ang;
-        v_raw[3] = - 0.5*SQRT2*vx + 0.5*SQRT2*vy + ang;*/
+        v_raw[0] =         vx                + ang;
+        v_raw[1] =   - 0.5*vx - 0.5*SQRT3*vy + ang;
+        v_raw[2] =   - 0.5*vx + 0.5*SQRT3*vy + ang;
 
-        v_raw[0] = - vx - vy + ang;
+        /*v_raw[0] = - vx - vy + ang;
         v_raw[1] =   vx - vy + ang;
         v_raw[2] =   vx + vy + ang;
-        v_raw[3] = - vx + vy + ang;
+        v_raw[3] = - vx + vy + ang;*/
 
         //PW_MAX
         for (int i = 0; i < MOTOR_NUM; i++) {
@@ -58,7 +58,7 @@ int main(int argc, char **argv) {
     ros::init(argc, argv, "omni");
     ros::NodeHandle nh;
 
-    order.data.assign(4,0);
+    order.data.assign(MOTOR_NUM,0);
 
     pub = nh.advertise<std_msgs::Int16MultiArray>("omni", 1);
     sub = nh.subscribe("joy", 1, callback);

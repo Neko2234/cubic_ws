@@ -1,0 +1,6 @@
+omni
+/home/m/cubic_ws/devel/.private/omni/cmake.lock /home/m/cubic_ws/devel/./cmake.lock
+/home/m/cubic_ws/devel/.private/omni/share/omni/cmake/omniConfig.cmake /home/m/cubic_ws/devel/share/omni/cmake/omniConfig.cmake
+/home/m/cubic_ws/devel/.private/omni/share/omni/cmake/omniConfig-version.cmake /home/m/cubic_ws/devel/share/omni/cmake/omniConfig-version.cmake
+/home/m/cubic_ws/devel/.private/omni/lib/pkgconfig/omni.pc /home/m/cubic_ws/devel/lib/pkgconfig/omni.pc
+/home/m/cubic_ws/devel/.private/omni/lib/omni/3omni /home/m/cubic_ws/devel/lib/omni/3omni
