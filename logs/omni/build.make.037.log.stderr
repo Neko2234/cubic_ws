@@ -1,0 +1,12 @@
+[01m[K/home/m/cubic_ws/src/omni/src/3omni.cpp:[m[K In function ‘[01m[Kvoid target_culc()[m[K’:
+[01m[K/home/m/cubic_ws/src/omni/src/3omni.cpp:51:14:[m[K [01;31m[Kerror: [m[K‘[01m[Ke_sum[m[K’ was not declared in this scope; did you mean ‘[01m[Ks_sum[m[K’?
+   51 |     }else if([01;31m[Ke_sum[m[K == 0){//エラー
+      |              [01;31m[K^~~~~[m[K
+      |              [32m[Ks_sum[m[K
+[01m[K/home/m/cubic_ws/src/omni/src/3omni.cpp:[m[K In function ‘[01m[Kvoid publish()[m[K’:
+[01m[K/home/m/cubic_ws/src/omni/src/3omni.cpp:82:18:[m[K [01;31m[Kerror: [m[K‘[01m[Ke[m[K’ was not declared in this scope
+   82 |  order.data[i] = [01;31m[Ke[m[K[i];
+      |                  [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/3omni.dir/build.make:63: CMakeFiles/3omni.dir/src/3omni.cpp.o] エラー 1
+make[1]: *** [CMakeFiles/Makefile2:155: CMakeFiles/3omni.dir/all] エラー 2
+make: *** [Makefile:141: all] エラー 2
